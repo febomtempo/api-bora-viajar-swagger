@@ -1,0 +1,77 @@
+---
+swagger: "2.0"
+info:
+  description: "Esse é um website com objetivo de criar um ambiente para que usuá\
+    rios consigam pesquisar e encontrar hospedagens de variados tipos e preços e també\
+    m com integração à uma carteira digital para filtrar baseando nos valores pré\
+    -determinados pelo usuário. A API documentada aqui tem função de pegar essas informaç\
+    ões e apresentá-las para o usuário."
+  version: "0.0.7"
+  title: "Bora Viajar!"
+  termsOfService: ""
+  contact:
+    email: "febomtempo@gmail.com"
+  license:
+    name: "White Paper"
+    url: "https://drive.google.com/file/d/1y2Z7BwwsXyGBpdYsWoJMDf2riLgPhUpS/view"
+host: "api-bora-viajar.vercel.app"
+basePath: "/"
+schemes:
+- "https"
+paths:
+  /temporada:
+    get:
+      tags:
+      - "Temporada"
+      summary: "Encontrar as melhores hospedagens."
+      description: "Vários tipos de hospedagens baseando pelo valor e localização."
+      operationId: "buscar"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "state"
+        in: "query"
+        description: "Estado onde a hospedagem está localizada."
+        required: false
+        type: "string"
+        default: "sao-paulo"
+      - name: "city"
+        in: "query"
+        description: "Cidade onde a hospedagem está localizada."
+        required: false
+        type: "string"
+        default: "sao-paulo"
+      - name: "page"
+        in: "query"
+        description: "Página da busca"
+        required: false
+        type: "number"
+        default: 1
+      responses:
+        "200":
+          description: "operação bem-sucedida"
+        "400":
+          description: "Operação mal-sucedida"
+      x-swagger-router-controller: "Temporada"
+  /temporada/buscar:
+    get:
+      tags:
+      - "Temporada"
+      summary: "Informações mais detalhadas da hospedagem."
+      description: "Várias informações extras sobre a hospedagem selecionada."
+      operationId: "buscar-detalhes"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "origin"
+        in: "query"
+        description: "ID único de cada hospedagem."
+        required: false
+        type: "string"
+        default: "/aluguel-temporada/brasil/sao-paulo/praia-grande/ocian/93995-luxuoso-apartamento-frente-pro-mar"
+      responses:
+        "200":
+          description: "operação bem-sucedida"
+        "400":
+          description: "Operação mal-sucedida"
+      x-swagger-router-controller: "Temporada"
