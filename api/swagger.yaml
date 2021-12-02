@@ -6,7 +6,7 @@ info:
     m com integração à uma carteira digital para filtrar baseando nos valores pré\
     -determinados pelo usuário. A API documentada aqui tem função de pegar essas informaç\
     ões e apresentá-las para o usuário."
-  version: "0.0.7"
+  version: "1.0.0"
   title: "Bora Viajar!"
   termsOfService: ""
   contact:
@@ -24,7 +24,7 @@ paths:
       tags:
       - "Temporada"
       summary: "Encontrar as melhores hospedagens."
-      description: "Vários tipos de hospedagens baseando pelo valor e localização."
+      description: "Vários tipos de hospedagens baseadas pela localização."
       operationId: "buscar"
       produces:
       - "application/json"
@@ -49,7 +49,7 @@ paths:
         default: 1
       responses:
         "200":
-          description: "operação bem-sucedida"
+          description: "Operação bem-sucedida"
         "400":
           description: "Operação mal-sucedida"
       x-swagger-router-controller: "Temporada"
@@ -71,7 +71,29 @@ paths:
         default: "/aluguel-temporada/brasil/sao-paulo/praia-grande/ocian/93995-luxuoso-apartamento-frente-pro-mar"
       responses:
         "200":
-          description: "operação bem-sucedida"
+          description: "Operação bem-sucedida"
+        "400":
+          description: "Operação mal-sucedida"
+      x-swagger-router-controller: "Temporada"
+  /carteira/recomendacao:
+    get:
+      tags:
+      - "Carteira"
+      summary: "Encontrar Hospedagens pelo Valor."
+      description: "Vários tipos de hospedagens baseadas pelo valor."
+      operationId: "carteira-recomendacao"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "balance"
+        in: "query"
+        description: "Saldo Total."
+        required: false
+        type: "string"
+        default: "100"
+      responses:
+        "200":
+          description: "Operação bem-sucedida"
         "400":
           description: "Operação mal-sucedida"
       x-swagger-router-controller: "Temporada"

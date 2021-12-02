@@ -1,6 +1,6 @@
 {
   "name": "bora-viajar",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Esse é um website com objetivo de criar um ambiente para que usuários consigam pesquisar e encontrar hospedagens de variados tipos e preços e também com integração à uma carteira digital para filtrar baseando nos valores pré-determinados pelo usuário. A API documentada aqui tem função de pegar essas informações e apresentá-las para o usuário.",
   "main": "index.js",
   "scripts": {

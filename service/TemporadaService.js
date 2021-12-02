@@ -3,7 +3,7 @@
 
 /**
  * Encontrar as melhores hospedagens.
- * Vários tipos de hospedagens baseando pelo valor e localização.
+ * Vários tipos de hospedagens baseadas pela localização.
  *
  * state String Estado onde a hospedagem está localizada. (optional)
  * city String Cidade onde a hospedagem está localizada. (optional)
