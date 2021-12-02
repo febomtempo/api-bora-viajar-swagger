@@ -45,7 +45,7 @@ paths:
         in: "query"
         description: "Página da busca"
         required: false
-        type: "int"
+        type: "integer"
         default: 1
       responses:
         "200":
@@ -89,7 +89,7 @@ paths:
         in: "query"
         description: "Saldo Total."
         required: false
-        type: "double"
+        type: "number"
         default: "100"
       responses:
         "200":
