@@ -2,12 +2,12 @@
 
 
 /**
- * Encontrar as melhores hospedagens.
+ * Encontrar as melhores hospedagens na localização escolhida.
  * Vários tipos de hospedagens baseadas pela localização.
  *
  * state String Estado onde a hospedagem está localizada. (optional)
  * city String Cidade onde a hospedagem está localizada. (optional)
- * page BigDecimal Página da busca (optional)
+ * page Integer Página da busca (optional)
  * no response value expected for this operation
  **/
 exports.buscar = function(state,city,page) {

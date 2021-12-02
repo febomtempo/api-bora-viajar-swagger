@@ -23,7 +23,7 @@ paths:
     get:
       tags:
       - "Temporada"
-      summary: "Encontrar as melhores hospedagens."
+      summary: "Encontrar as melhores hospedagens na localização escolhida."
       description: "Vários tipos de hospedagens baseadas pela localização."
       operationId: "buscar"
       produces:
@@ -90,7 +90,7 @@ paths:
         description: "Saldo Total."
         required: false
         type: "number"
-        default: "100"
+        default: 100
       responses:
         "200":
           description: "Operação bem-sucedida"
